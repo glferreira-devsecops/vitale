@@ -24,7 +24,7 @@ import { toast } from '@/components/ui/use-toast';
 import { supabase } from '@/lib/supabase';
 
 // Interface completa do produto com todos os campos
-interface CompleteProductForm {
+export interface CompleteProductForm {
   // Campos básicos
   name: string;
   slug: string;

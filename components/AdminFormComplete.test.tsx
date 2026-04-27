@@ -203,6 +203,7 @@ describe('completeProductSubmit', () => {
       seo_keywords: 'keyword1, keyword2',
       stock_quantity: 10,
       min_stock_alert: 5,
+      requires_prescription: false,
       discount_percentage: 0,
       currency: 'BRL'
     };
@@ -241,6 +242,10 @@ describe('completeProductSubmit', () => {
   it('deve converter strings separadas por vírgula em arrays', async () => {
     const mockData = {
       name: 'Teste',
+      slug: 'teste',
+      description: 'Produto de teste',
+      category: 'geral',
+      featured: false,
       images: 'img1.jpg, img2.jpg, img3.jpg',
       tags: 'tag1, tag2, tag3',
       seo_keywords: 'kw1, kw2, kw3',
@@ -251,7 +256,8 @@ describe('completeProductSubmit', () => {
       currency: 'BRL',
       discount_percentage: 0,
       stock_quantity: 0,
-      min_stock_alert: 5
+      min_stock_alert: 5,
+      requires_prescription: false,
     };
 
     // Mock para capturar os dados enviados
